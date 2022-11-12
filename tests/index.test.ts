@@ -10,20 +10,20 @@ describe('Basic routes', () => {
     );
   });
 
-	it('should return 404 response for not found routes', async () => {
-		const res = await app.request('http://localhost/this/does/not/exists');
-		expect(res.status).toBe(404);
-	});
+  it('should return 404 response for not found routes', async () => {
+    const res = await app.request('http://localhost/this/does/not/exists');
+    expect(res.status).toBe(404);
+  });
 });
 
 describe('Quote routes', () => {
   it('should return a random quote on /quote/random endpoint', async () => {
-		const res = await app.request('http://localhost/quote/random');
-		const body = await res.json<IOfficeQuote>();
+    const res = await app.request('http://localhost/quote/random');
+    const body = await res.json<IOfficeQuote>();
 
-		expect(res.status).toBe(200);
-		expect(res.headers.get('Content-Type')).toContain('application/json');
-		expect(body.character).not.toBe('');
-		expect(body.quote).not.toBe('');
-	});
+    expect(res.status).toBe(200);
+    expect(res.headers.get('Content-Type')).toContain('application/json');
+    expect(body.character).not.toBe('');
+    expect(body.quote).not.toBe('');
+  });
 });

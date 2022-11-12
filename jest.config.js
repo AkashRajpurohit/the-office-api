@@ -3,4 +3,4 @@ module.exports = {
     '^.+\\.(ts|tsx)$': 'esbuild-jest',
   },
   testEnvironment: 'miniflare',
-}
+};

@@ -2,9 +2,9 @@ name: Deploy to Cloudflare Workers
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test-and-deploy:
@@ -28,7 +28,7 @@ jobs:
       # Run tests
       - name: Run tests 🫡
         run: yarn test
-      
+
       # Deploy
       - name: Deploy 🚀
         # Deploy only when code is pushed to main branch

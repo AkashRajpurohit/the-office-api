@@ -6,7 +6,7 @@ Simple JSON API for getting random quotes from "The Office U.S" series.
 
 Base URL - [https://officeapi.akashrajpurohit.com](https://officeapi.akashrajpurohit.com)
 
-## Get random Quote 
+## Get random Quote
 
 Request Path - [/quote/random](https://officeapi.akashrajpurohit.com/quote/random)
 
@@ -14,8 +14,8 @@ Response -
 
 ```json
 {
-	"character": "Dwight Schrute",
-	"quote": "Any time I'm about to do something, I think to myself 'Would an idiot do that?' and if the answer is yes, I do not do that thing."
+  "character": "Dwight Schrute",
+  "quote": "Any time I'm about to do something, I think to myself 'Would an idiot do that?' and if the answer is yes, I do not do that thing."
 }
 ```
 
@@ -34,7 +34,7 @@ Please check the [guide](/CONTRIBUTING.md) to learn more about contributing to t
 
 # Where to find me? 👀
 
-* [Website](https://akashrajpurohit.com/)
-* [Linkedin](https://www.linkedin.com/in/AkashRajpurohit)
-* [Instagram](https://www.instagram.com/akashwho.codes)
-* [Twitter](https://www.twitter.com/akashwhocodes)
+- [Website](https://akashrajpurohit.com/)
+- [Linkedin](https://www.linkedin.com/in/AkashRajpurohit)
+- [Instagram](https://www.instagram.com/akashwho.codes)
+- [Twitter](https://www.twitter.com/akashwhocodes)

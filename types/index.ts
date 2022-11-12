@@ -1,4 +1,4 @@
 export interface IOfficeQuote {
-	quote: string;
-	character: string;
+  quote: string;
+  character: string;
 }
