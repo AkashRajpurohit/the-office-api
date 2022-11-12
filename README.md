@@ -30,7 +30,7 @@ If you encounter any problems feel free to open an [issue](https://github.com/Ak
 
 # Contributions 🤝
 
-Please check the [guide](./CONTRIBUTING.md) to learn more about contributing to this project
+Please check the [guide](/CONTRIBUTING.md) to learn more about contributing to this project
 
 # Where to find me? 👀
 

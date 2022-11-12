@@ -1,6 +1,6 @@
 # Contributing
 
-There are two ways you can contribute, one is by adding more quotes. You can do this by adding the quotes to the JSON array which is available [here]((./data/quotes.json)).
+There are two ways you can contribute, one is by adding more quotes. You can do this by adding the quotes to the JSON array which is available [here]((/data/quotes.json)).
 
 Another way to contribute is if you find any bugs, you can report them by creating [issues](https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=bug_report.md) or better, fix them and open a pull request.
 
