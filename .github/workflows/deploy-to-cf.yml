@@ -29,9 +29,9 @@ jobs:
       
       # Deploy
       - name: Deploy 🚀
-      - run: yarn deploy
         # Deploy only when code is pushed to main branch
         if: ${{ github.event_name == 'push' }}
+        run: yarn deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
