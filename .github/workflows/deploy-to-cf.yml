@@ -19,8 +19,10 @@ jobs:
         with:
           node-version: '16.x'
 
-      - name: Install dependencies 🔽
+      - name: Install Yarn 🧶
         run: npm install -g yarn
+
+      - name: Install Dependencies 🔽
         run: yarn install --frozen-lockfile
 
       # Run tests
