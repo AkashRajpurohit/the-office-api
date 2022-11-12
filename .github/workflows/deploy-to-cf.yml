@@ -11,7 +11,17 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v2
-      - name: Publish
-        uses: cloudflare/wrangler-action@2.0.0
+
+      # Build the project
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+
+      # Deploy
+      - run: yarn deploy
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
