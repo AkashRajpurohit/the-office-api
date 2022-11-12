@@ -20,7 +20,7 @@ app.get('/', (c) => {
 
 app.get('/quote/random', (c) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  return c.json({ ...randomQuote });
+  return c.json(randomQuote);
 });
 
 app.notFound((c) => c.json({ message: 'Not Found', ok: false }, 404));
