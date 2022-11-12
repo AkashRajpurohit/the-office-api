@@ -2,27 +2,36 @@ name: Deploy to Cloudflare Workers
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  deploy:
+  test-and-deploy:
     runs-on: ubuntu-latest
-    name: Deploy
+    name: Test and deploy
     steps:
       - uses: actions/checkout@v2
 
-      # Build the project
-      - name: Use Node.js
+      # Setup the project
+      - name: Use Node.js 🔥
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
 
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
+      - name: Install dependencies 🔽
+        run: npm install -g yarn
+        run: yarn install --frozen-lockfile
 
+      # Run tests
+      - name: Run tests 🫡
+        run: yarn test
+      
       # Deploy
+      - name: Deploy 🚀
       - run: yarn deploy
+        # Deploy only when code is pushed to main branch
+        if: ${{ github.event_name == 'push' }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
