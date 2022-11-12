@@ -15,7 +15,7 @@ Response -
 ```json
 {
 	"character": "Dwight Schrute",
-  "quote": "Any time I'm about to do something, I think to myself 'Would an idiot do that?' and if the answer is yes, I do not do that thing."
+	"quote": "Any time I'm about to do something, I think to myself 'Would an idiot do that?' and if the answer is yes, I do not do that thing."
 }
 ```
 
