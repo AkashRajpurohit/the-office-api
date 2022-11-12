@@ -23,5 +23,6 @@ jobs:
 
       # Deploy
       - run: yarn deploy
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
