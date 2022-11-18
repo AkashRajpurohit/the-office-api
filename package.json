@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "wrangler dev --local",
     "start": "wrangler dev",
     "deploy": "wrangler publish",
     "format": "prettier --write .",
