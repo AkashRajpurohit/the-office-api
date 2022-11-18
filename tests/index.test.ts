@@ -1,5 +1,5 @@
 import app from '../src/index';
-import { IOfficeQuote } from '../types';
+import { IErrorResponse, IOfficeQuote } from '../types';
 
 describe('Basic routes', () => {
   it('should redirect to github URL for index route', async () => {
@@ -25,5 +25,35 @@ describe('Quote routes', () => {
     expect(res.headers.get('Content-Type')).toContain('application/json');
     expect(body.character).not.toBe('');
     expect(body.quote).not.toBe('');
+  });
+
+  it('should return a quote for a valid id', async () => {
+    const res = await app.request('http://localhost/quote/1');
+    const body = await res.json<IOfficeQuote>();
+
+    expect(res.status).toBe(200);
+    expect(res.headers.get('Content-Type')).toContain('application/json');
+    expect(body.character).not.toBe('');
+    expect(body.quote).not.toBe('');
+  });
+
+  it('should return a error for a invalid id', async () => {
+    const res = await app.request('http://localhost/quote/PIZZA!!');
+    const body = await res.json<IErrorResponse>();
+
+    expect(res.status).toBe(400);
+    expect(res.headers.get('Content-Type')).toContain('application/json');
+    expect(body.ok).toBe(false);
+    expect(body.message).toBe('Invalid ID');
+  });
+
+  it('should return a error for a id does not exists', async () => {
+    const res = await app.request('http://localhost/quote/100000000000');
+    const body = await res.json<IErrorResponse>();
+
+    expect(res.status).toBe(400);
+    expect(res.headers.get('Content-Type')).toContain('application/json');
+    expect(body.ok).toBe(false);
+    expect(body.message).toBe('ID does not exists... yet!');
   });
 });

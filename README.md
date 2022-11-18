@@ -14,8 +14,23 @@ Response -
 
 ```json
 {
+  "id": 31,
   "character": "Dwight Schrute",
   "quote": "Any time I'm about to do something, I think to myself 'Would an idiot do that?' and if the answer is yes, I do not do that thing."
+}
+```
+
+## Get Quote by ID
+
+Request Path - [/quote/:id](https://officeapi.akashrajpurohit.com/quote/38)
+
+Response -
+
+```json
+{
+  "id": 38,
+  "character": "Dwight Schrute",
+  "quote": "Identity theft is not a joke, Jim! Millions of families suffer every year!"
 }
 ```
 

@@ -23,6 +23,34 @@ app.get('/quote/random', (c) => {
   return c.json(randomQuote);
 });
 
-app.notFound((c) => c.json({ message: 'Not Found', ok: false }, 404));
+app.get('/quote/:id', (c) => {
+  const id = Number(c.req.param('id'));
+
+  if (Number.isNaN(id)) {
+    return c.json(
+      {
+        ok: false,
+        message: 'Invalid ID',
+      },
+      400
+    );
+  }
+
+  const quote = quotes.find((quote) => quote.id === id);
+
+  if (!quote) {
+    return c.json(
+      {
+        ok: false,
+        message: 'ID does not exists... yet!',
+      },
+      400
+    );
+  }
+
+  return c.json(quote);
+});
+
+app.notFound((c) => c.json({ ok: false, message: 'Not Found' }, 404));
 
 export default app;
