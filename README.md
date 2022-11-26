@@ -1,6 +1,6 @@
 # The Office Quotes API
 
-Simple JSON API for getting random quotes from "The Office U.S" series.
+Simple JSON API for "The Office U.S." series.
 
 # API Contract 🫱🏻‍🫲🏼
 
