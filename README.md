@@ -1,4 +1,4 @@
-# The Office Quotes API
+# The Office API
 
 Simple JSON API for "The Office U.S." series.
 
