@@ -14,7 +14,7 @@ app.use('*', cors());
 app.get('/', (c) => {
   // For default route, redirect to github repo
   return c.redirect(
-    'https://github.com/AkashRajpurohit/the-office-quotes-api',
+    'https://github.com/AkashRajpurohit/the-office-api#api-contract-',
     302
   );
 });

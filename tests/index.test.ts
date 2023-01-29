@@ -6,7 +6,7 @@ describe('Basic routes', () => {
     const res = await app.request('http://localhost/');
     expect(res.status).toBe(302);
     expect(res.headers.get('location')).toBe(
-      'https://github.com/AkashRajpurohit/the-office-quotes-api'
+      'https://github.com/AkashRajpurohit/the-office-api#api-contract-'
     );
   });
 
