@@ -14,23 +14,23 @@ Response -
 
 ```json
 {
-  "id": 31,
-  "character": "Dwight Schrute",
-  "quote": "Any time I'm about to do something, I think to myself 'Would an idiot do that?' and if the answer is yes, I do not do that thing."
+  "id": 45,
+  "character": "Michael Scott",
+  "quote": "I am running away from my responsibilities. And it feels good."
 }
 ```
 
 ## Get Quote by ID
 
-Request Path - [/quote/:id](https://officeapi.akashrajpurohit.com/quote/38)
+Request Path - [/quote/:id](https://officeapi.akashrajpurohit.com/quote/156)
 
 Response -
 
 ```json
 {
-  "id": 38,
+  "id": 156,
   "character": "Dwight Schrute",
-  "quote": "Identity theft is not a joke, Jim! Millions of families suffer every year!"
+  "quote": "Everyone, follow me to the shelter. We’ve got enough food for 14 days. After that, we have a difficult conversation."
 }
 ```
 
