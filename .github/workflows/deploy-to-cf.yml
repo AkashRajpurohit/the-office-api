@@ -27,6 +27,12 @@ jobs:
       - name: Run tests 🫡
         run: yarn test
 
+      - name: Upload Test Results ⏫
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: .coverage/
+
       # Deploy
       - name: Deploy 🚀
         # Deploy only when code is pushed to main branch
