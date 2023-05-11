@@ -1,6 +1,27 @@
-# The Office API
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/AkashRajpurohit/the-office-api">
+    <img src="https://media.tenor.com/sZ8zYU7hT1wAAAAM/dance-party.gif" alt="Micheal is happy" width="150" height="150">
+  </a>
 
-Simple JSON API for "The Office U.S." series.
+  <h3 align="center">The Office API</h3>
+
+  <p align="center">
+    <samp>A free restful API serving quotes from "The Office U.S." series.</samp>
+    <br />
+    <a href="https://akashrajpurohit.github.io/the-office-api/"><strong>Explore the api »</strong></a>
+    <br />
+    <br />
+    <a href="/CONTRIBUTING.md">Contributing</a>
+    ·
+    <a href="https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=bug_report.md">Bug report</a>
+    ·
+    <a href="https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=feature_request.md">Feature request</a>
+  </p>
+</p>
+
+<br/>
 
 # API Contract 🫱🏻‍🫲🏼
 
