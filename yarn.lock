@@ -313,10 +313,10 @@
   dependencies:
     mime "^3.0.0"
 
-"@cloudflare/workers-types@^3.18.0":
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-3.19.0.tgz#f3791b80b23f7cf0072f2e67e98aa37801204b6c"
-  integrity sha512-0FRcsz7Ea3jT+gc5gKPIYciykm1bbAaTpygdzpCwGt0RL+V83zWnYN30NWDW4rIHj/FHtz+MIuBKS61C8l7AzQ==
+"@cloudflare/workers-types@^4.0.0":
+  version "4.20230511.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-4.20230511.0.tgz#48f187b35234b9be7c2c6303718584fce8243278"
+  integrity sha512-Br4i/8+t60HDJIo8o7O9Rrmp03bhdejRW9klb0bK9EfG5Ii7qz5G3PJO12gUz+Vu9m1v9tZ9KOh3Gg8oshXtug==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
