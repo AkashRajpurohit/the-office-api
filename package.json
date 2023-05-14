@@ -10,7 +10,7 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "hono": "^2.5.0"
+    "hono": "^3.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.18.0",
