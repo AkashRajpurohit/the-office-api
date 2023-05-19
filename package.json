@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "wrangler dev --local",
     "start": "wrangler dev",
-    "deploy": "wrangler publish",
+    "deploy": "wrangler deploy",
     "format": "prettier --write .",
     "test": "jest --coverage"
   },
