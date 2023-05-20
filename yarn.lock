@@ -2295,9 +2295,9 @@ has@^1.0.3:
     function-bind "^1.1.1"
 
 hono@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-3.2.0.tgz#96f782db6b99a1a4c0d9393f2ecee5e5eb3aa3bb"
-  integrity sha512-dsPameDZC+VYainhDxUnuYRFUytpLBN9CF1QjrtPx7AtlOaNLMKc5pKsZF1dnPmGal/QaM9YDAEnzZLUJ1ugsA==
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-3.2.1.tgz#1a2c60811efba96f3f08aab9746104ca2c3d988f"
+  integrity sha512-yWpBvr5E5u2JPsVfgBOBlfqbpTCkTE5nZWB0WrA5QJYTQCf39WjhkZ4iFLP/tv4hgWBtXC+aWGyCHt11H10ghg==
 
 html-escaper@^2.0.0:
   version "2.0.2"
