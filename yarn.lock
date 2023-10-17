@@ -502,9 +502,9 @@
   integrity sha512-DYKkLtT4lNRdVx+2fbYgPxdF7ypJn9bT2HYMZ93N7XPwaKFx2svBRMrZkwBcvwuNb+99Z0jnaQwdcFnHcFLzZA==
 
 "@cloudflare/workers-types@^4.0.0", "@cloudflare/workers-types@^4.20221111.1":
-  version "4.20230807.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-4.20230807.0.tgz#db6684f40f1570685e835eb3622ec7a1fb79880c"
-  integrity sha512-gQczWuGE2rxmpzOCNn0zLbx8Xz0gqspdE9S7tu4Xax39q1csgO/E9flcS+KG3GHB522ugOh84inmABDhpeJnvQ==
+  version "4.20231016.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-4.20231016.0.tgz#f2a896f112424e0ed3956cb4ad66a2c0e07050fc"
+  integrity sha512-eGB0cRVyoJpeyGJx2re5sbd9R316a61sY73xwnqm4cwGpb+OxCK2gc651RxGiN7H4w6LY1RpysUgeGLmj5B3+g==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
