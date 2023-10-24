@@ -37,7 +37,8 @@ Response -
 {
   "id": 45,
   "character": "Michael Scott",
-  "quote": "I am running away from my responsibilities. And it feels good."
+  "quote": "I am running away from my responsibilities. And it feels good.",
+  "character_avatar_url": "https://i.gyazo.com/5a3113ead3f3541731bf721d317116df.jpg"
 }
 ```
 
@@ -51,7 +52,8 @@ Response -
 {
   "id": 156,
   "character": "Dwight Schrute",
-  "quote": "Everyone, follow me to the shelter. We’ve got enough food for 14 days. After that, we have a difficult conversation."
+  "quote": "Everyone, follow me to the shelter. We’ve got enough food for 14 days. After that, we have a difficult conversation.",
+  "character_avatar_url": "https://i.gyazo.com/dd60242b96d427eecb431e0668a2ca82.jpg"
 }
 ```
 
