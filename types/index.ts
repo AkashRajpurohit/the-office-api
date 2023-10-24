@@ -2,6 +2,7 @@ export interface IOfficeQuote {
   id: number;
   quote: string;
   character: string;
+  character_avatar_url: string;
 }
 
 export interface IOfficeEpisodes {

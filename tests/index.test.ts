@@ -25,6 +25,7 @@ describe('Quote routes', () => {
     expect(res.headers.get('Content-Type')).toContain('application/json');
     expect(body.character).not.toBe('');
     expect(body.quote).not.toBe('');
+    expect(body.character_avatar_url).not.toBe('');
   });
 
   it('should return a quote for a valid id', async () => {
@@ -35,6 +36,7 @@ describe('Quote routes', () => {
     expect(res.headers.get('Content-Type')).toContain('application/json');
     expect(body.character).not.toBe('');
     expect(body.quote).not.toBe('');
+    expect(body.character_avatar_url).not.toBe('');
   });
 
   it('should return a error for a invalid id', async () => {
