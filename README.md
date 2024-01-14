@@ -169,7 +169,8 @@ Please check the [guide](/CONTRIBUTING.md) to learn more about contributing to t
 
 # Where to find me? 👀
 
-- [Website](https://akashrajpurohit.com/)
-- [Linkedin](https://www.linkedin.com/in/AkashRajpurohit)
-- [Instagram](https://www.instagram.com/akashwho.codes)
-- [Twitter](https://www.twitter.com/akashwhocodes)
+[![Website Badge](https://img.shields.io/badge/-akashrajpurohit.com-3b5998?logo=google-chrome&logoColor=white)](https://akashrajpurohit.com/?ref=office-api)
+[![Twitter Badge](https://img.shields.io/badge/-@akashwhocodes-00acee?logo=Twitter&logoColor=white)](https://twitter.com/AkashWhoCodes)
+[![Linkedin Badge](https://img.shields.io/badge/-@AkashRajpurohit-0e76a8?logo=Linkedin&logoColor=white)](https://linkedin.com/in/AkashRajpurohit)
+[![Instagram Badge](https://img.shields.io/badge/-@akashwho.codes-e4405f?logo=Instagram&logoColor=white)](https://instagram.com/akashwho.codes/)
+[![Telegram Badge](https://img.shields.io/badge/-@AkashRajpurohit-0088cc?logo=Telegram&logoColor=white)](https://t.me/AkashRajpurohit)
