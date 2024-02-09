@@ -2479,10 +2479,10 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
-hono@^3.0.0:
-  version "3.12.3"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-3.12.3.tgz#ac670ad55819311a78a24527aa8b21f512c05f5e"
-  integrity sha512-eymmA0t4YzoBlaZhfcJiR6wC9tIdIgx68fdHYCpbKf0RMYXux+uJjwuZSAa2pKPNXZd6K6oGgizqaiLDvQ5jzg==
+hono@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.0.0.tgz#09a9c63c9eee3b5df6c971853490e44267f1335a"
+  integrity sha512-8dKhuBBpRZEodUttQhrSFJ6PQqHRjXHyeeegfxOf132pvgbf0tOb9qqb7q7eYwAWpOcYrsUOsWdJ0sQIIovhZg==
 
 html-escaper@^2.0.0:
   version "2.0.2"
