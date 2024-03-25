@@ -15,9 +15,9 @@
     <br />
     <a href="/CONTRIBUTING.md">Contributing</a>
     ·
-    <a href="https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=bug_report.md">Bug report</a>
+    <a href="https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=bug_report.yml">Bug report</a>
     ·
-    <a href="https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=feature_request.md">Feature request</a>
+    <a href="https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=feature_request.yml">Feature request</a>
   </p>
 </p>
 
@@ -161,7 +161,7 @@ Response -
 
 # Bugs or Requests 🐛
 
-If you encounter any problems feel free to open an [issue](https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=bug_report.md). If you feel the project is missing a feature, please raise a [ticket](https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=feature_request.md) on GitHub and I'll look into it. Pull requests are also welcome.
+If you encounter any problems feel free to open an [issue](https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=bug_report.yml). If you feel the project is missing a feature, please raise a [ticket](https://github.com/AkashRajpurohit/the-office-quotes-api/issues/new?template=feature_request.yml) on GitHub and I'll look into it. Pull requests are also welcome.
 
 # Contributions 🤝
 
