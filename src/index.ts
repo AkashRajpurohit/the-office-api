@@ -1,7 +1,6 @@
 import { Hono } from 'hono';
 import { prettyJSON } from 'hono/pretty-json';
 import { cors } from 'hono/cors';
-import { cache } from 'hono/cache'
 import quotes from '../data/quotes.json';
 import episodes from '../data/episodes.json';
 
@@ -10,7 +9,6 @@ const app = new Hono();
 // Middlewares
 app.use('*', prettyJSON());
 app.use('*', cors());
-app.use('*', cache({ cacheName: 'the-office-api', cacheControl: 's-maxage=15' }));
 
 // Routes
 app.get('/', (c) => {
@@ -24,7 +22,9 @@ app.get('/', (c) => {
 // Quotes routes
 app.get('/quote/random', (c) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  return c.json(randomQuote);
+  return c.json(randomQuote, 200, {
+    'Cache-Control': 's-maxage=15',
+  });
 });
 
 app.get('/quote/:id', (c) => {
@@ -52,7 +52,9 @@ app.get('/quote/:id', (c) => {
     );
   }
 
-  return c.json(quote);
+  return c.json(quote, 200, {
+    'Cache-Control': 's-maxage=15',
+  });
 });
 
 // Seasons & Episodes routes
@@ -81,7 +83,9 @@ app.get('/season/:id', (c) => {
     );
   }
 
-  return c.json(seasonData);
+  return c.json(seasonData, 200, {
+    'Cache-Control': 's-maxage=15',
+  });
 });
 
 app.get('/season/:season_id/episode/:episode_id', (c) => {
@@ -112,7 +116,9 @@ app.get('/season/:season_id/episode/:episode_id', (c) => {
     );
   }
 
-  return c.json(episodeData);
+  return c.json(episodeData, 200, {
+    'Cache-Control': 's-maxage=15',
+  });
 });
 
 app.notFound((c) => c.json({ ok: false, message: 'Not Found' }, 404));
