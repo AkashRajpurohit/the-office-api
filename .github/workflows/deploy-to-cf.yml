@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     name: Test and deploy
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout 🧳
+        uses: actions/checkout@v4
 
-      # Setup the project
-      - name: Use Node.js 🔥
-        uses: actions/setup-node@v4
+      - name: Setup PNPM ⚙️
+        uses: AkashRajpurohit/.github/.github/actions/setup-pnpm@main
         with:
-          node-version: 16
-          cache: 'yarn'
+          node_version: 20
+          pnpm_version: 9
 
-      - name: Install Dependencies 🔽
-        run: yarn install --frozen-lockfile
+      - name: Install dependencies ⏬
+        run: pnpm install --no-frozen-lockfile
 
       # Run tests
       - name: Run tests 🫡
