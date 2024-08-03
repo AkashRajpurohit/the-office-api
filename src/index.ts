@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { prettyJSON } from 'hono/pretty-json';
 import { cors } from 'hono/cors';
+import { cache } from 'hono/cache'
 import quotes from '../data/quotes.json';
 import episodes from '../data/episodes.json';
 
@@ -9,6 +10,7 @@ const app = new Hono();
 // Middlewares
 app.use('*', prettyJSON());
 app.use('*', cors());
+app.use('*', cache({ cacheName: 'the-office-api', cacheControl: 's-maxage=15' }));
 
 // Routes
 app.get('/', (c) => {
