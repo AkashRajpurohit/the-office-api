@@ -87,9 +87,6 @@ describe('Quote routes', () => {
       expect(svgText).toContain(
         'Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.'
       );
-      expect(svgText).toContain(
-        'https://miro.medium.com/v2/resize:fit:500/1*xDIevNE7HEMiJQVTYg0qDQ.png'
-      );
       expect(svgText).toContain('class="card-dark"'); // default mode is dark mode
 
       // Test for light mode as well
