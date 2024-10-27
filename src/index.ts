@@ -35,12 +35,12 @@ app.get('/quote/random', (c) => {
     const svgQuote = getSVGQuote(randomQuote, { mode });
     return c.text(svgQuote, 200, {
       'Content-Type': 'image/svg+xml',
-      'Cache-Control': 'max-age=3600, s-maxage=1800',
+      'Cache-Control': 'max-age=60, s-maxage=300', // 1 minute <> 5 minutes
     });
   }
 
   return c.json(randomQuote, 200, {
-    'Cache-Control': 's-maxage=15',
+    'Cache-Control': 'max-age=60, s-maxage=300', // 1 minute <> 5 minutes
   });
 });
 
@@ -76,12 +76,12 @@ app.get('/quote/:id', (c) => {
     const svgQuote = getSVGQuote(quote, { mode });
     return c.text(svgQuote, 200, {
       'Content-Type': 'image/svg+xml',
-      'Cache-Control': 'max-age=3600, s-maxage=1800',
+      'Cache-Control': 'max-age=86400, s-maxage=7889238', // 1 month <> 3 months
     });
   }
 
   return c.json(quote, 200, {
-    'Cache-Control': 's-maxage=15',
+    'Cache-Control': 'max-age=86400, s-maxage=7889238', // 1 month <> 3 months
   });
 });
 
