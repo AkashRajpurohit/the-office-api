@@ -21,3 +21,10 @@ export interface IErrorResponse {
   ok: boolean;
   message: string;
 }
+
+export interface ISVGQuoteOptions {
+  mode?: QuoteSVGMode;
+}
+
+export type QuoteResponseTypeQuery = 'json' | 'svg';
+export type QuoteSVGMode = 'light' | 'dark';

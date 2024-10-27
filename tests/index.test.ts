@@ -17,46 +17,88 @@ describe('Basic routes', () => {
 });
 
 describe('Quote routes', () => {
-  it('should return a random quote on /quote/random endpoint', async () => {
-    const res = await app.request('http://localhost/quote/random');
-    const body = await res.json<IOfficeQuote>();
+  describe('JSON Response', () => {
+    it('should return a random quote on /quote/random endpoint', async () => {
+      const res = await app.request('http://localhost/quote/random');
+      const body = await res.json<IOfficeQuote>();
 
-    expect(res.status).toBe(200);
-    expect(res.headers.get('Content-Type')).toContain('application/json');
-    expect(body.character).not.toBe('');
-    expect(body.quote).not.toBe('');
-    expect(body.character_avatar_url).not.toBe('');
+      expect(res.status).toBe(200);
+      expect(res.headers.get('Content-Type')).toContain('application/json');
+      expect(body.character).not.toBe('');
+      expect(body.quote).not.toBe('');
+      expect(body.character_avatar_url).not.toBe('');
+    });
+
+    it('should return a quote for a valid id', async () => {
+      const res = await app.request('http://localhost/quote/1');
+      const body = await res.json<IOfficeQuote>();
+
+      expect(res.status).toBe(200);
+      expect(res.headers.get('Content-Type')).toContain('application/json');
+      expect(body.character).toBe('Michael Scott');
+      expect(body.quote).toBe(
+        'Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.'
+      );
+      expect(body.character_avatar_url).toBe(
+        'https://i.gyazo.com/5a3113ead3f3541731bf721d317116df.jpg'
+      );
+    });
+
+    it('should return a error for a invalid id', async () => {
+      const res = await app.request('http://localhost/quote/PIZZA!!');
+      const body = await res.json<IErrorResponse>();
+
+      expect(res.status).toBe(400);
+      expect(res.headers.get('Content-Type')).toContain('application/json');
+      expect(body.ok).toBe(false);
+      expect(body.message).toBe('Invalid ID');
+    });
+
+    it('should return a error for a id does not exists', async () => {
+      const res = await app.request('http://localhost/quote/100000000000');
+      const body = await res.json<IErrorResponse>();
+
+      expect(res.status).toBe(400);
+      expect(res.headers.get('Content-Type')).toContain('application/json');
+      expect(body.ok).toBe(false);
+      expect(body.message).toBe('ID does not exists... yet!');
+    });
   });
 
-  it('should return a quote for a valid id', async () => {
-    const res = await app.request('http://localhost/quote/1');
-    const body = await res.json<IOfficeQuote>();
+  describe('SVG Response', () => {
+    it('should return a random quote svg image on /quote/random if responseType is svg', async () => {
+      const res = await app.request(
+        'http://localhost/quote/random?responseType=svg'
+      );
 
-    expect(res.status).toBe(200);
-    expect(res.headers.get('Content-Type')).toContain('application/json');
-    expect(body.character).not.toBe('');
-    expect(body.quote).not.toBe('');
-    expect(body.character_avatar_url).not.toBe('');
-  });
+      expect(res.status).toBe(200);
+      expect(res.headers.get('Content-Type')).toContain('image/svg+xml');
+    });
 
-  it('should return a error for a invalid id', async () => {
-    const res = await app.request('http://localhost/quote/PIZZA!!');
-    const body = await res.json<IErrorResponse>();
+    it('should return a quote for a valid id', async () => {
+      const res = await app.request(
+        'http://localhost/quote/1?responseType=svg'
+      );
+      const svgText = await res.text();
 
-    expect(res.status).toBe(400);
-    expect(res.headers.get('Content-Type')).toContain('application/json');
-    expect(body.ok).toBe(false);
-    expect(body.message).toBe('Invalid ID');
-  });
+      expect(res.status).toBe(200);
+      expect(res.headers.get('Content-Type')).toContain('image/svg+xml');
+      expect(svgText).toContain('Michael Scott');
+      expect(svgText).toContain(
+        'Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.'
+      );
+      expect(svgText).toContain(
+        'https://i.gyazo.com/5a3113ead3f3541731bf721d317116df.jpg'
+      );
+      expect(svgText).toContain('class="card-dark"'); // default mode is dark mode
 
-  it('should return a error for a id does not exists', async () => {
-    const res = await app.request('http://localhost/quote/100000000000');
-    const body = await res.json<IErrorResponse>();
-
-    expect(res.status).toBe(400);
-    expect(res.headers.get('Content-Type')).toContain('application/json');
-    expect(body.ok).toBe(false);
-    expect(body.message).toBe('ID does not exists... yet!');
+      // Test for light mode as well
+      const res2 = await app.request(
+        'http://localhost/quote/1?responseType=svg&mode=light'
+      );
+      const svgText2 = await res2.text();
+      expect(svgText2).toContain('class="card-light"');
+    });
   });
 });
 

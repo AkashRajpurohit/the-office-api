@@ -8,7 +8,7 @@
   <h3 align="center">The Office API</h3>
 
   <p align="center">
-    <samp>A free restful API serving quotes from "The Office U.S." series.</samp>
+    <samp>A free restful API serving quotes (and seasons information) from "The Office U.S." series.</samp>
     <br />
     <a href="https://akashrajpurohit.github.io/the-office-api/"><strong>Explore the api »</strong></a>
     <br />
@@ -26,6 +26,8 @@
 # API Contract 🫱🏻‍🫲🏼
 
 Base URL - [https://officeapi.akashrajpurohit.com](https://officeapi.akashrajpurohit.com)
+
+# Quotes
 
 ## Get random Quote
 
@@ -56,6 +58,11 @@ Response -
   "character_avatar_url": "https://i.gyazo.com/dd60242b96d427eecb431e0668a2ca82.jpg"
 }
 ```
+
+> Quotes API support both JSON and SVG responses. To get SVG responses, add a `responseType` query parameter to `svg`.
+> For example, `https://officeapi.akashrajpurohit.com/quote/156?responseType=svg`.
+>
+> Along with `responseType` you can also pass the `mode` query parameter to get the SVG card is `dark` or `light` mode.
 
 ## Get Season by ID
 

@@ -3,6 +3,11 @@ import { prettyJSON } from 'hono/pretty-json';
 import { cors } from 'hono/cors';
 import quotes from '../data/quotes.json';
 import episodes from '../data/episodes.json';
+import { getSVGQuote } from './lib/svgQuote';
+import {
+  QuoteResponseTypeQuery,
+  QuoteSVGMode as QuoteSVGModeQuery,
+} from '../types';
 
 const app = new Hono();
 
@@ -22,6 +27,18 @@ app.get('/', (c) => {
 // Quotes routes
 app.get('/quote/random', (c) => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  const responseType = (c.req.query('responseType') ||
+    'json') as QuoteResponseTypeQuery;
+
+  if (responseType === 'svg') {
+    const mode = (c.req.query('mode') || 'dark') as QuoteSVGModeQuery;
+    const svgQuote = getSVGQuote(randomQuote, { mode });
+    return c.text(svgQuote, 200, {
+      'Content-Type': 'image/svg+xml',
+      'Cache-Control': 'max-age=3600, s-maxage=1800',
+    });
+  }
+
   return c.json(randomQuote, 200, {
     'Cache-Control': 's-maxage=15',
   });
@@ -29,6 +46,8 @@ app.get('/quote/random', (c) => {
 
 app.get('/quote/:id', (c) => {
   const id = Number(c.req.param('id'));
+  const responseType = (c.req.query('responseType') ||
+    'json') as QuoteResponseTypeQuery;
 
   if (Number.isNaN(id)) {
     return c.json(
@@ -50,6 +69,15 @@ app.get('/quote/:id', (c) => {
       },
       400
     );
+  }
+
+  if (responseType === 'svg') {
+    const mode = (c.req.query('mode') || 'dark') as QuoteSVGModeQuery;
+    const svgQuote = getSVGQuote(quote, { mode });
+    return c.text(svgQuote, 200, {
+      'Content-Type': 'image/svg+xml',
+      'Cache-Control': 'max-age=3600, s-maxage=1800',
+    });
   }
 
   return c.json(quote, 200, {
