@@ -59,10 +59,14 @@ Response -
 }
 ```
 
+> [!NOTE]\
 > Quotes API support both JSON and SVG responses. To get SVG responses, add a `responseType` query parameter to `svg`.
 > For example, `https://officeapi.akashrajpurohit.com/quote/255?responseType=svg`.
 >
-> Along with `responseType` you can also pass the `mode` query parameter to get the SVG card is `dark` or `light` mode.
+> Other supported query parameters are:
+> `mode` -> can be `light` or `dark`
+> `width -> the SVG card's width.
+> `height` -> the SVG card's height.
 
 Example of SVG can be seen below:
 

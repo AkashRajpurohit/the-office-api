@@ -1,28 +1,39 @@
 import { IOfficeQuote, ISVGQuoteOptions } from '../../types';
 
+const HEIGHTS = {
+  small: 180,
+  medium: 240,
+  large: 280,
+};
+
 export const getSVGQuote = (
   quote: IOfficeQuote,
-  { mode }: ISVGQuoteOptions
+  { mode, width, height }: ISVGQuoteOptions
 ) => {
-  const heights = {
-    small: 180,
-    medium: 240,
-    large: 280,
-  };
+  const modeClass = mode === 'dark' ? 'dark' : 'light';
+  let cardWidth = 400;
+  let cardHeight = HEIGHTS.small;
 
-  let cardHeight = heights.small;
-  if (quote.quote.length < 200) {
-    cardHeight = heights.small;
-  } else if (quote.quote.length < 280) {
-    cardHeight = heights.medium;
-  } else {
-    cardHeight = heights.large;
+  if (width && Number.isSafeInteger(Number(width)) && Number(width) <= 1280) {
+    cardWidth = Number(width);
   }
 
-  const modeClass = mode === 'dark' ? 'dark' : 'light';
+  if (
+    height &&
+    Number.isSafeInteger(Number(height)) &&
+    Number(height) <= 1080
+  ) {
+    cardHeight = Number(height);
+  } else if (quote.quote.length < 200) {
+    cardHeight = HEIGHTS.small;
+  } else if (quote.quote.length < 260) {
+    cardHeight = HEIGHTS.medium;
+  } else {
+    cardHeight = HEIGHTS.large;
+  }
 
   const svgTemplate = `
-    <svg width="400" height="${cardHeight}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 ${cardHeight}">
+    <svg width="${cardWidth}" height="${cardHeight}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${cardWidth} ${cardHeight}">
       <defs>
         <linearGradient id="lightGradient" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stop-color="#f9fafb" />

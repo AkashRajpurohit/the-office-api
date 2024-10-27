@@ -24,6 +24,8 @@ export interface IErrorResponse {
 
 export interface ISVGQuoteOptions {
   mode?: QuoteSVGMode;
+  width?: string;
+  height?: string;
 }
 
 export type QuoteResponseTypeQuery = 'json' | 'svg';
