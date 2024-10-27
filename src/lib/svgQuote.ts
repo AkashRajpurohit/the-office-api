@@ -6,7 +6,18 @@ const HEIGHTS = {
   large: 280,
 };
 
-export const getSVGQuote = (
+const fetchImageAsDataURI = async (url: string) => {
+  const response = await fetch(url);
+  const arrayBuffer = await response.arrayBuffer();
+  const base64String = btoa(
+    String.fromCharCode(...new Uint8Array(arrayBuffer))
+  );
+  const mimeType = response.headers.get('Content-Type') || 'image/png';
+
+  return `data:${mimeType};base64,${base64String}`;
+};
+
+export const getSVGQuote = async (
   quote: IOfficeQuote,
   { mode, width, height }: ISVGQuoteOptions
 ) => {
@@ -31,6 +42,8 @@ export const getSVGQuote = (
   } else {
     cardHeight = HEIGHTS.large;
   }
+
+  const avatarDataURI = await fetchImageAsDataURI(quote.character_avatar_url);
 
   const svgTemplate = `
     <svg width="${cardWidth}" height="${cardHeight}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${cardWidth} ${cardHeight}">
@@ -94,7 +107,7 @@ export const getSVGQuote = (
       </foreignObject>
 
       <g transform="translate(20, ${cardHeight - 50})">
-        <image href="${quote.character_avatar_url}" width="30" height="30" class="avatar" />
+        <image href="${avatarDataURI}" width="30" height="30" class="avatar" />
         <text x="40" y="20" class="character-info" style="--text-color: ${mode === 'dark' ? '#cccccc' : '#555'};">
           - ${quote.character}
         </text>

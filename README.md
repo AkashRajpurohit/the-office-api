@@ -64,13 +64,16 @@ Response -
 > For example, `https://officeapi.akashrajpurohit.com/quote/255?responseType=svg`.
 >
 > Other supported query parameters are:
+> 
 > `mode` -> can be `light` or `dark`
-> `width -> the SVG card's width.
+> 
+> `width` -> the SVG card's width.
+> 
 > `height` -> the SVG card's height.
 
 Example of SVG can be seen below:
 
-![](https://officeapi.akashrajpurohit.com/quote/255?responseType=svg)
+![](https://officeapi.akashrajpurohit.com/quote/235?responseType=svg)
 
 
 ## Get Season by ID
