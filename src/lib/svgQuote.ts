@@ -4,9 +4,20 @@ export const getSVGQuote = (
   quote: IOfficeQuote,
   { mode }: ISVGQuoteOptions
 ) => {
-  const baseHeight = 250;
-  const extendedHeight = 300;
-  const cardHeight = quote.quote.length > 280 ? extendedHeight : baseHeight;
+  const heights = {
+    small: 180,
+    medium: 240,
+    large: 280,
+  };
+
+  let cardHeight = heights.small;
+  if (quote.quote.length < 200) {
+    cardHeight = heights.small;
+  } else if (quote.quote.length < 280) {
+    cardHeight = heights.medium;
+  } else {
+    cardHeight = heights.large;
+  }
 
   const modeClass = mode === 'dark' ? 'dark' : 'light';
 
