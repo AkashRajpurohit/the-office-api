@@ -46,23 +46,28 @@ Response -
 
 ## Get Quote by ID
 
-Request Path - [/quote/:id](https://officeapi.akashrajpurohit.com/quote/156)
+Request Path - [/quote/:id](https://officeapi.akashrajpurohit.com/quote/255)
 
 Response -
 
 ```json
 {
-  "id": 156,
+  "id": 255,
   "character": "Dwight Schrute",
-  "quote": "Everyone, follow me to the shelter. We’ve got enough food for 14 days. After that, we have a difficult conversation.",
+  "quote": "Jim is my enemy. But it turns out that Jim is also his own worst enemy. And the enemy of my enemy is my friend. So, Jim is actually my friend. But because he is his own worst enemy, the enemy of my friend is my enemy so, actually, Jim is my enemy.",
   "character_avatar_url": "https://i.gyazo.com/dd60242b96d427eecb431e0668a2ca82.jpg"
 }
 ```
 
 > Quotes API support both JSON and SVG responses. To get SVG responses, add a `responseType` query parameter to `svg`.
-> For example, `https://officeapi.akashrajpurohit.com/quote/156?responseType=svg`.
+> For example, `https://officeapi.akashrajpurohit.com/quote/255?responseType=svg`.
 >
 > Along with `responseType` you can also pass the `mode` query parameter to get the SVG card is `dark` or `light` mode.
+
+Example of SVG can be seen below:
+
+![](https://officeapi.akashrajpurohit.com/quote/255?responseType=svg)
+
 
 ## Get Season by ID
 
