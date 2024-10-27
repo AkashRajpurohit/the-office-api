@@ -40,7 +40,7 @@ Response -
   "id": 45,
   "character": "Michael Scott",
   "quote": "I am running away from my responsibilities. And it feels good.",
-  "character_avatar_url": "https://i.gyazo.com/5a3113ead3f3541731bf721d317116df.jpg"
+  "character_avatar_url": "https://miro.medium.com/v2/resize:fit:500/1*xDIevNE7HEMiJQVTYg0qDQ.png"
 }
 ```
 
@@ -55,7 +55,7 @@ Response -
   "id": 255,
   "character": "Dwight Schrute",
   "quote": "Jim is my enemy. But it turns out that Jim is also his own worst enemy. And the enemy of my enemy is my friend. So, Jim is actually my friend. But because he is his own worst enemy, the enemy of my friend is my enemy so, actually, Jim is my enemy.",
-  "character_avatar_url": "https://i.gyazo.com/dd60242b96d427eecb431e0668a2ca82.jpg"
+  "character_avatar_url": "https://i.redd.it/hrieyrl117891.jpg"
 }
 ```
 
