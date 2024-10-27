@@ -35,9 +35,9 @@ export const getSVGQuote = async (
     Number(height) <= 1080
   ) {
     cardHeight = Number(height);
-  } else if (quote.quote.length < 200) {
+  } else if (quote.quote.length < 160) {
     cardHeight = HEIGHTS.small;
-  } else if (quote.quote.length < 260) {
+  } else if (quote.quote.length < 220) {
     cardHeight = HEIGHTS.medium;
   } else {
     cardHeight = HEIGHTS.large;
