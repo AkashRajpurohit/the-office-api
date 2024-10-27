@@ -73,7 +73,7 @@ Response -
 
 Example of SVG can be seen below:
 
-![](https://officeapi.akashrajpurohit.com/quote/235?responseType=svg)
+![](https://officeapi.akashrajpurohit.com/quote/254?responseType=svg)
 
 
 ## Get Season by ID
