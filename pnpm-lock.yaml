@@ -35,7 +35,7 @@ importers:
         version: 3.3.3
       typescript:
         specifier: ^5.6.3
-        version: 5.6.3
+        version: 5.8.2
       wrangler:
         specifier: 3.83.0
         version: 3.83.0(@cloudflare/workers-types@4.20241022.0)
@@ -1807,8 +1807,8 @@ packages:
     resolution: {integrity: sha512-tqa/UMy/CCoYmj+H5qc07qvSL9dqcs/WZENZ1JbtWBlATP+iVOe778gE6MSijnyCnORzDuX6hU+LA4SZ09YjFQ==}
     engines: {node: '>=0.10.0'}
 
-  ohash@1.1.4:
-    resolution: {integrity: sha512-FlDryZAahJmEF3VR3w1KogSEdWX3WhA5GPakFx4J81kEAiHyLMpdLLElS8n8dfNadMgAne/MywcvmogzscVt4g==}
+  ohash@1.1.5:
+    resolution: {integrity: sha512-AtXrG/lMFjPBWj3uhWYFwYVZQqutPYRsv6nnPLTipnC+gJuMFc+WFzf/jx+94Ebray1vxfQfEFDtpIpppOe4xQ==}
 
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
@@ -2187,8 +2187,8 @@ packages:
   typedarray-to-buffer@3.1.5:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -4452,7 +4452,7 @@ snapshots:
     dependencies:
       isobject: 3.0.1
 
-  ohash@1.1.4: {}
+  ohash@1.1.5: {}
 
   once@1.4.0:
     dependencies:
@@ -4793,7 +4793,7 @@ snapshots:
     dependencies:
       is-typedarray: 1.0.0
 
-  typescript@5.6.3: {}
+  typescript@5.8.2: {}
 
   ufo@1.5.4: {}
 
@@ -4806,7 +4806,7 @@ snapshots:
   unenv-nightly@2.0.0-20241018-011344-e666fcf:
     dependencies:
       defu: 6.1.4
-      ohash: 1.1.4
+      ohash: 1.1.5
       pathe: 1.1.2
       ufo: 1.5.4
 
