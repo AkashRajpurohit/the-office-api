@@ -12,7 +12,7 @@ jobs:
     name: Test and deploy
     steps:
       - name: Checkout 🧳
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup PNPM ⚙️
         uses: AkashRajpurohit/.github/.github/actions/setup-pnpm@main
